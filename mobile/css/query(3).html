@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title></title>
+	<link rel="stylesheet" href="mobile/css/themes/default/jquery.mobile-1.4.5.min.css">
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="mobile/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+   <div data-role="page" id="demo-page">
+        <div data-role="header" data-theme="b" id="con">
+			<p style="padding-left:5px;">蓝天快递快捷查询入口</p>
+		</div>
+        <div role="main" class="ui-content"  data-role="content" >
+			<form id="form1" name="form1" action="http://track.blueskyexpress.com.au/cgi-bin/GInfo.dll?EmmisTrack" method="post" target="_blank" id="hy_search">
+			    <input name="w" type="hidden" value="blueskyexpress">
+				<textarea cols="40" rows="8" id="textareainput" name="cno"> </textarea>
+				<input class="ui-btn ui-corner-all" type="submit" value="开始查询"></input>
+				<a data-ajax="false" class="ui-btn ui-corner-all" href="javascript:go();">上传身份证图</a>
+			</form>
+		</div>
+	   <div data-role="footer" data-position="fixed" data-theme="b" id="con" data-tap-toggle="false">
+	      <h4>@2016 BSE CopyRight</h4>
+	   </div>
+   </div>
+</body>
+<script language="JavaScript">
+<!--
+//待开发
+function go(){
+	window.open('http://track.blueskyexpress.com.au/icard/');
+}
+</script>
+</html>
